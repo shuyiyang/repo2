@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+management: 
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+spring:
+  application:
+    name: system-service
+  kafka:
+    bootstrap-servers: lockhost:9090
+  consumer: 
+    group-id: sf-group
+        #boot:
+         # admin:
+         #   client:
+          #    url: http://localhost:9000
+        profiles:
+          active: dev
